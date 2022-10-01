@@ -2,27 +2,27 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Signup from "./pages/Signup";
-import Signin from "./pages/Signin";
-import Profile from "./pages/Profile";
-import Order from "./pages/Order";
-import ForgotPassword from "./pages/ForgotPassword";
-import EventDetail from "./pages/EventDetail";
-import Payment from "./pages/Payment";
+// import Signin from "./pages/Signin";
+// import Profile from "./pages/Profile";
+// import Order from "./pages/Order";
+// import ForgotPassword from "./pages/ForgotPassword";
+// import EventDetail from "./pages/EventDetail";
+// import Payment from "./pages/Payment";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        {/* <Route path="/signin" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/order" element={<Order />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/productdetail" element={<EventDetail />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/payment" element={<Payment />} /> */}
         <Route
           path="*"
           element={
