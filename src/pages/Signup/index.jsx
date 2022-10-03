@@ -1,12 +1,12 @@
-import logo from "../../assets/img/logo.png";
+// import logo from "../../assets/img/logo.png";
 import Header from "../../components/Header";
-import "./signup.css";
+// import "./signup.css";
 
 function Signup() {
   return (
     <>
       <Header />
-      <main>
+      {/* <main>
         <aside className="side-content">
           <img className="side-img" src={logo} alt="icon" />
         </aside>
@@ -46,7 +46,7 @@ function Signup() {
             </form>
           </div>
         </section>
-      </main>
+      </main> */}
     </>
   );
 }
