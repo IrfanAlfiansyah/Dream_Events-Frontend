@@ -1,4 +1,8 @@
 import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "../../utils/axios";
+
 import icon from "../../assets/img/icon.png";
 import logo from "../../assets/img/logo.png";
 import google from "../../assets/img/google.png";
@@ -7,39 +11,84 @@ import facebook from "../../assets/img/fb..png";
 import "./Signin.css";
 
 export default function Signin() {
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChangeForm = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  // const [showPassword, setShowPassword] = useState(false);
+  const handleLogin = async () => {
+    try {
+      const result = await axios.post("auth/login", form);
+      localStorage.setItem("idUser", result.data.data.id);
+      localStorage.setItem("token", result.data.data.token);
+      // localStorage.setItem("refreshToken", result.data.data.refreshToken);
+      alert(result.data.msg);
+      navigate("/signup");
+    } catch (error) {
+      console.error(error.response);
+    }
+  };
   return (
     <main>
-      <aside className="side-content-signin align-self-center text-center">
+      <aside className="row side-content-signin justify-content-center align-items-center">
         <img className="side-img-signin " src={icon} alt="icon" />
       </aside>
-      <section className="main-header">
-        <header className="header">
-          <img className="header-logo" src={logo} alt="logo" />
+      <section className="main-header-signin">
+        <header className="header-signin">
+          <img className="header-logo-signin" src={logo} alt="logo" />
         </header>
-        <div className="title">
-          <h1 className="title-text">Sign In</h1>
-          <div className="welcome">
-            <p className="welcome-text">Hi, Welcome back to Urticket! </p>
+        <div className="title-signin">
+          <h1 className="title-text-signin">Sign In</h1>
+          <div className="welcome-signin">
+            <p className="welcome-text-signin">
+              Hi, Welcome back to Urticket!{" "}
+            </p>
           </div>
         </div>
-        <div className="form">
-          <form className="form-container">
-            <input type="text" className="form-input" placeholder="Username" />
-            <input type="text" className="form-input" placeholder="Email" />
+        <div className="form-signin">
+          <form className="form-container-signin">
             <input
-              type="password"
-              className="form-input"
-              placeholder="Password"
+              type="text"
+              className="form-input-signin"
+              placeholder="Username"
+              onChange={handleChangeForm}
             />
-            <button className="forgot-pw">Forgot Password?</button>
-            <button className="button-signin">Sign In</button>
+            <input
+              type="text"
+              className="form-input-signin"
+              placeholder="Email"
+              onChange={handleChangeForm}
+            />
+            <input
+              // type={showPassword? "text" : "password"}
+              type="password"
+              className="form-input-signin"
+              placeholder="Password"
+              onChange={handleChangeForm}
+            />
+            <button className="forgot-pw-signin">Forgot Password?</button>
+            <button className="button-signin" onClick={handleLogin}>
+              Sign In
+            </button>
             <p className="alternative-signin">or sign in with</p>
-            <div className="alternative-signin-icon">
+            <div className="row alternative-signin-icon">
               <button className="alternative-signin-button">
-                <img src={google} alt="google" />
+                <img
+                  className="alternative-signin-img"
+                  src={google}
+                  alt="google"
+                />
               </button>
               <button className="alternative-signin-button">
-                <img src={facebook} alt="facebook" />
+                <img
+                  className="alternative-signin-img"
+                  src={facebook}
+                  alt="facebook"
+                />
               </button>
             </div>
           </form>
