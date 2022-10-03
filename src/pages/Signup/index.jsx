@@ -2,6 +2,7 @@ import React from "react";
 // import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import axios from "../../utils/axios";
+import { Link } from "react-router-dom";
 
 import icon from "../../assets/img/icon.png";
 import logo from "../../assets/img/logo.png";
@@ -40,10 +41,12 @@ export default function Signup() {
           <img className="header-logo-signup" src={logo} alt="logo" />
         </header>
         <div className="title-signup">
-          <h1 className="title-text-signup">Sign In</h1>
+          <h1 className="title-text-signup">Sign Up</h1>
           <div className="welcome-signup">
             <p className="welcome-text-signup">Already have an account? </p>
-            <button className="login-button">Log in</button>
+            <Link to="/signin">
+              <button className="login-button">Log in</button>
+            </Link>
           </div>
         </div>
         <div className="form-signup">

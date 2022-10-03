@@ -65,7 +65,8 @@ main {
   font-family: Poppins;
   font-size: 14px;
   font-weight: 600;
-  margin-left: 2%;
+  margin-left: 10%;  
+  width: max-content;
 }
 
 .login-button:hover{

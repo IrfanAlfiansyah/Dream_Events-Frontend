@@ -40,7 +40,7 @@ export default function ForgotPassword() {
           <img className="header-logo-forgot" src={logo} alt="logo" />
         </header>
         <div className="title-forgot">
-          <h1 className="title-text-forgot">Sign In</h1>
+          <h1 className="title-text-forgot">Forgot Password</h1>
           <div className="welcome-forgot">
             <p className="welcome-text-forgot">
               You will get mail soon on your email{" "}

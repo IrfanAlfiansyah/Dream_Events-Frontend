@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 
 import icon from "../../assets/img/icon.png";
@@ -23,7 +23,7 @@ export default function Signin() {
   const handleLogin = async () => {
     try {
       const result = await axios.post("auth/login", form);
-      localStorage.setItem("idUser", result.data.data.id);
+      localStorage.setItem("userId", result.data.data.id);
       localStorage.setItem("token", result.data.data.token);
       // localStorage.setItem("refreshToken", result.data.data.refreshToken);
       alert(result.data.msg);
@@ -70,7 +70,9 @@ export default function Signin() {
               placeholder="Password"
               onChange={handleChangeForm}
             />
-            <button className="forgot-pw-signin">Forgot Password?</button>
+            <Link to="/forgotpassword">
+              <button className="forgot-pw-signin">Forgot Password?</button>
+            </Link>
             <button className="button-signin" onClick={handleLogin}>
               Sign In
             </button>
