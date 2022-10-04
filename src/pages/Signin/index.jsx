@@ -23,11 +23,11 @@ export default function Signin() {
   const handleLogin = async () => {
     try {
       const result = await axios.post("auth/login", form);
-      localStorage.setItem("userId", result.data.data.id);
+      localStorage.setItem("userId", result.data.data.userId);
       localStorage.setItem("token", result.data.data.token);
-      // localStorage.setItem("refreshToken", result.data.data.refreshToken);
-      alert(result.data.msg);
-      navigate("/signup");
+      localStorage.setItem("refreshToken", result.data.data.refreshToken);
+      alert(result.data.message);
+      navigate("/");
     } catch (error) {
       console.error(error.response);
     }
@@ -58,7 +58,7 @@ export default function Signin() {
               onChange={handleChangeForm}
             />
             <input
-              type="text"
+              type="email"
               className="form-input-signin"
               placeholder="Email"
               onChange={handleChangeForm}
