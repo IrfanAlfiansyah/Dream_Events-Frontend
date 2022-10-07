@@ -2,6 +2,7 @@ import React from "react";
 // import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import axios from "../../utils/axios";
+import Footer from "../../components/Footer";
 
 import icon from "../../assets/img/icon.png";
 import logo from "../../assets/img/logo.png";
@@ -31,35 +32,38 @@ export default function ForgotPassword() {
   //   }
   // };
   return (
-    <main>
-      <aside className="row side-content-forgot justify-content-center align-items-center">
-        <img className="side-img-forgot " src={icon} alt="icon" />
-      </aside>
-      <section className="main-header-forgot">
-        <header className="header-forgot">
-          <img className="header-logo-forgot" src={logo} alt="logo" />
-        </header>
-        <div className="title-forgot">
-          <h1 className="title-text-forgot">Forgot Password</h1>
-          <div className="welcome-forgot">
-            <p className="welcome-text-forgot">
-              You will get mail soon on your email{" "}
-            </p>
+    <>
+      <main>
+        <aside className="row side-content-forgot justify-content-center align-items-center">
+          <img className="side-img-forgot " src={icon} alt="icon" />
+        </aside>
+        <section className="main-header-forgot">
+          <header className="header-forgot">
+            <img className="header-logo-forgot" src={logo} alt="logo" />
+          </header>
+          <div className="title-forgot">
+            <h1 className="title-text-forgot">Forgot Password</h1>
+            <div className="welcome-forgot">
+              <p className="welcome-text-forgot">
+                You will get mail soon on your email{" "}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="form-forgot">
-          <form className="form-container-forgot">
-            <input
-              type="text"
-              className="form-input-forgot"
-              placeholder="Email"
-              // onChange={handleChangeForm}
-            />
+          <div className="form-forgot">
+            <form className="form-container-forgot">
+              <input
+                type="email"
+                className="form-input-forgot"
+                placeholder="Email"
+                // onChange={handleChangeForm}
+              />
 
-            <button className="button-forgot">Send</button>
-          </form>
-        </div>
-      </section>
-    </main>
+              <button className="button-forgot">Send</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }

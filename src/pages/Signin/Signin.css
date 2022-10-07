@@ -9,11 +9,11 @@
   src: url("../../assets/Poppins/Poppins-Regular.ttf");
 }
 
-main {
+.signin {
   max-width: 100%;
   display: flex;
   flex-direction: row;
-  max-height: max-content;
+  height: max-content;
 }
 
 /* side-section */
@@ -29,6 +29,7 @@ main {
 /* main-section */
 .main-header-signin {
   flex: 40%;
+  height: max-content !important;
 }
 
 .header-logo-signin {
@@ -69,7 +70,7 @@ main {
   text-align: right;
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
   font-size: 14px;
   font-weight: 400;

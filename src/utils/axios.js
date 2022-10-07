@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosApiIntances = axios.create({
-  baseURL: "https://localhost:3001/api/",
+  baseURL: "http://localhost:3001/api/",
   // baseURL: "https://event-organizing-backend.vercel.app/api",
 });
 

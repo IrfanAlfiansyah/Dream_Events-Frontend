@@ -1,0 +1,9 @@
+.card {
+  background-image: url(../../assets/img/event.png);
+  height: max-content;
+  align-items: center;
+  justify-content: left;
+}
+.card-body {
+  
+}

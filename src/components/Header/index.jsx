@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   return (
-    <div>
+    <div className="header sticky-top">
       <nav className="navbar navbar-expand-lg bg-white">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">

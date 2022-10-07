@@ -9,11 +9,11 @@
   src: url("../../assets/Poppins/Poppins-Regular.ttf");
 }
 
-main {
+.signup {
   max-width: 100%;
   display: flex;
   flex-direction: row;
-  max-height: max-content;
+  height: max-content;
 }
 
 /* side-section */
@@ -110,11 +110,8 @@ input[type="password"] {
   margin-bottom: 5%;
 }
 
-.forgot-pw-signup {
-  color: rgba(51, 102, 255, 1);
-  background-color: white;
-  border: 0;
-  
+.icon-eye-password {
+  margin-bottom: 5%;
 }
 
 .button-signup {

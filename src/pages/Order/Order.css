@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../../assets/Poppins/Poppins-Regular.ttf");
+}
+
+.primary {
+  background: rgba(244, 247, 255, 1);
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: max-content;
+}
+
+.main-content {
+  background-color: white;
+  border-radius: 35px;
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+}
+.side-order {
+  width: 60%;
+}
+.img-order {
+  height: 100%;
+  width: 100%;
+}
+
+.order-class {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.head-order-class {
+  display: flex;
+  flex-direction: row;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ticket {
+  margin-bottom: 0;
+  margin-top: 4%;
+  margin-right: 60%;
+}
+
+.byprice {
+  margin-bottom: 0;
+  margin-top: 4%;
+}
+
+.order-card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-right: 5%;
+}
+.sort-img {
+  height: 65px;
+  width: 65px;  
+}
+
+.regular {
+  height: 45px;
+  width: 45px;
+}
+
+.order-description {
+  margin-right: 30%;
+  margin-left: 10%;
+}
+
+.section {
+  margin: 0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-left {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(189, 192, 196, 1);
+}
+
+.price-tag {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.per-person {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(189, 192, 196, 1);
+}
+
+.price-tag {
+  margin: 0;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+}
+
+.quantity-tag {
+  margin: 0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 18%;
+  margin-right: 40%;
+}
+
+.quantity-tag-min {
+  width: 33px;
+  height: 33px;
+  background-color: white;
+  border: 1px solid rgba(193, 197, 208, 1);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.quantity-tag-plus {
+  width: 33px;
+  height: 33px;
+  background-color: white;
+  border: 1px solid rgba(193, 197, 208, 1);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.count {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.detail-order {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 15%;
+  margin-top: 10%;
+}
+
+.detail-order-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-order-info-text {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.detail-order-value-text {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: blue;
+}
+
+.button-checkout {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background: rgba(51, 102, 255, 1);
+  box-shadow: 0px 8px 10px 0px rgba(35, 149, 255, 0.3);
+  border: none;
+  height: 60px;
+  width: 80%;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 5%;
+}
+
+.button-checkout:hover {
+    background: rgb(11, 70, 248);
+}
+
+@media (max-width: 1440px) {
+  .primary {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: max-content;
+  }
+  .ticket {
+    margin-right: 55%;
+  }
+  .order-description {
+    margin-right: 25%;
+  }
+  .detail-order {
+    padding-right: 10%;
+  }
+}
+
+@media (max-width:1024px) {
+  .primary {
+    height: max-content;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+  .img-order {
+    height: 70%;
+    width: 100%;
+    margin-top: 10%;
+  }
+  .ticket {
+    margin-right: 40%;
+  }
+  .order-description {
+    margin-right: 10%;
+  }
+  .quantity-tag {
+    margin-left: 25%;
+    margin-right: 17%
+  }
+  .detail-order {
+    padding-right: 0%;
+  }
+  .detail-order-info-text {
+    margin-bottom: 5px;
+  }
+  .detail-order-value-text {
+    margin: 0;
+  }
+  .button-checkout {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .primary {
+    margin: 0%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: max-content;
+  }
+  .logo {
+    padding: 0;
+  }
+ 
+  .profile {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-name-tag {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .col-sm-3.profile {
+    margin-top: 15px;
+    justify-content: left;
+    padding-right: 10px;
+  }
+  .ticket {
+    font-size: 12px;
+    margin-right: 40%;
+  }
+  .byprice {
+    font-size: 12px;
+  }
+  .sort-img {
+    height: 35px;
+    width: 35px;
+  }
+  .regular {
+    height: 25px;
+    width: 25px;
+  }
+  .section {    
+    font-size: 10px;
+  }
+  .section-left {
+    font-size: 10px;
+  }
+  .price-tag {
+    font-size: 10px;
+  }
+  .per-person {
+    font-size: 10px;
+  }
+  .quantity-tag {
+    margin-left: 20%;
+    margin-right: 30%;    
+    font-size: 10px;
+  }
+  .quantity-tag-min {
+    font-size: 10px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+  }
+  .quantity-tag-plus {
+    font-size: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  .count {
+    font-size: 12px
+  }
+  .detail-order {
+    padding-right: 0%;
+  }
+  .detail-order-info-text {
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+  .detail-order-value-text {
+    font-size: 12px;
+    padding-right: 10px;
+    margin-bottom: 2px;
+  }
+  .button-checkout {
+    margin-top: 0;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width:425px) {
+  .logo {
+    height: 40px;
+  }
+  .header {
+    flex-direction: row;
+    height: 50%;
+  }
+  .nav-item {
+    font-size: 12px;
+  }
+  .profile {
+    height: 30px;
+    width: 30px;
+  }
+  .profile-name-tag {
+    font-size: 12px;
+  }
+  .body {
+    margin: 0;
+    background-color: white;
+  }
+  .main-content {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .img-order {
+    margin-left: 25px;
+    height: 350px;
+    width: 350px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); 
+    -moz-transform:rotate(45deg); 
+    -webkit-transform:rotate(45deg); 
+    -o-transform:rotate(45deg);
+    justify-content: center;
+    align-items: center;
+  }
+  .order-class {
+    width: 100%;
+  }
+  .head-order-class {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ticket {
+    margin-right: 60%;
+    margin-top: 8px;
+  }
+  .byprice {
+    margin-top: 8px;
+  }
+  .regular {
+    margin-left: 20px;
+  }
+  .order-description {
+    margin-right: 25%;
+  }
+  .quantity {
+    margin-top: 10px;
+  }
+  .quantity-tag {
+    margin-left: 21%;
+    margin-right: 40%;
+  }
+  .count {
+    font-size: 10px;
+  }
+  .detail-order {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+  .detail-order-info-text {
+    font-size: 10px;
+    margin: 0;
+  }
+  .detail-order-value-text {
+    font-size: 10px;
+    margin: 0;
+  }
+  .button-checkout {
+    width: 100%;
+    font-size: 12px;
+  }
+}
