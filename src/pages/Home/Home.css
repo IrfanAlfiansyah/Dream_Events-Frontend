@@ -82,39 +82,101 @@
   background-color: rgb(247, 186, 202);
   border-radius: 10px;
   font-family: Poppins;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: rgba(255, 61, 113, 1);
   margin-bottom: 5%;
-  width: 10%;
+  width: 15%;
 }
 .event-for-you {
   font-family: Poppins;
   font-size: 36px;
   font-weight: 600;
+  margin-bottom: 3%;
 }
 .see-all {
   border: 1px solid rgba(51, 102, 255, 1);
-  height: 30px;
-  border-radius: 20px;
-  margin-top: 3%;
+  height: 40px;
+  border-radius: 10px;
   color: rgba(51, 102, 255, 1);
   font-family: Poppins;
   font-size: 14px;
   font-weight: 600;
   background-color: white;
   width: 15%;
+  margin-bottom: 3%;
+}
+.see-all:hover {
+  color: rgb(10, 58, 201);
+  font-size: 16px;
 }
 .location-box {
   background-image: url(../../assets/img/layer.svg);
   display: flex;
   flex-direction: column;
+  border-radius: 50px;
+  margin: 7% 5%;
 }
 .location-img-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0% 5% 5%;
 }
-
+.location-line {
+  background: rgb(195, 210, 255);
+  width: max-content;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  padding: 0% 2%;
+  margin: 3% 5%;
+}
+.discover-text {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+  width: 15%;
+}
+.picture {
+  width: 100%;
+}
+.place {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  margin-top: 5%;
+  text-align: center;
+}
+.box-3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+.category-for-you {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+.navbar-nav {
+  padding: 0;
+}
+.nav-item {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+.nav-item:hover {
+  color: blue;
+  font-size: 18px;
+}
+.partner {
+  margin: 5% 0 0 0;
+  padding: 0;
+}

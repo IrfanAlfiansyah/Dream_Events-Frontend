@@ -69,6 +69,10 @@
   color: rgba(193, 197, 208, 1);
   margin-bottom: 15px;
 }
+.right-text:hover {
+  color: rgb(72, 73, 78);
+  font-weight: 600;
+}
 .top {
   margin-right: 150px;
 }
