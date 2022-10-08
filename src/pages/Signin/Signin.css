@@ -77,6 +77,12 @@ input[type="password"] {
   padding-left: 10%;
   font-family: Poppins;
 }
+.input-icon i {
+  position: absolute;
+  left: 85%;
+  top: 15%;
+  right: 5%;
+}
 
 .form-input-signin {
   background: #ffffff;

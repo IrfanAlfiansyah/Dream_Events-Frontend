@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../../assets/Poppins/Poppins-Regular.ttf);
+}
+.primary {
+  background: rgba(244, 247, 255, 1);
+  padding-top: 5%;
+}
+
+.main-content {
+  background-color: white;
+  border-radius: 35px;
+  max-width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+.side-payment {
+  width: 60%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.payment-method {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form-check {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  padding-bottom: 50px;
+}
+.form-check-img {
+  margin-right: 5%;
+}
+
+.bank-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.plus-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color:white;
+  border-style: dashed;
+  border-color: blue;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-top: 24%;
+}
+
+.img-payment {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.payment-class {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.head-payment-class {
+  display: flex;
+  flex-direction: row;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.detail-payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 15%;
+  margin-top: 10%;
+}
+
+.detail-payment-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-payment-info-text {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.detail-payment-value-text {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: right;
+  color: blue;
+}
+
+.button-payment {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background: rgba(51, 102, 255, 1);
+  box-shadow: 0px 8px 10px 0px rgba(35, 149, 255, 0.3);
+  border: none;
+  height: 60px;
+  width: 85%;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.button-payment:hover {
+    background: rgb(11, 70, 248);
+}
+
+@media (max-width:1024px) {
+  .payment-method {
+    font-size: 16px;
+  }
+  .img-payment {
+    height: 70%;
+    width: 100%;
+  }
+  .plus-button {
+    height: 30px;
+    width: 50px;
+    border-radius: 10px;
+  }
+  .ticket-detail {
+    font-size: 16px;
+  }
+  .form-check {
+    font-size: 14px;
+  }
+  .payment-class {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .detail-payment {
+    padding-right: 0%;
+  }
+  .detail-payment-info-text {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .detail-payment-value-text {
+    margin: 0;
+    font-size: 14px;
+  }
+  .button-payment {
+    margin-top: 30;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-method {
+    font-size: 14px;
+  }
+  .form-check-img {
+    height: 30px;
+  }
+  .img-payment {
+    width: 80%;
+  }
+  .plus-button {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    margin-top: 20%;
+  }
+  .ticket-detail {
+    font-size: 14px;
+  }
+  .form-check {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  .payment-class {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .detail-payment {
+    padding-right: 0%;
+  }
+  .detail-payment-info-text {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+  .detail-payment-value-text {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+  .button-payment {
+    margin-top: 30;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  .info {
+    margin-left: 100px;
+    height: fit-content;
+    margin-bottom: 100px;
+  }
+  .logo-img2 {
+    margin-bottom: 10px;
+  }
+  .sosmed-icon {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width:425px) {
+  .logo {
+    height: 40px;
+  }
+  .header {
+    flex-direction: row;
+    height: 50%;
+  }
+  .nav-item {
+    font-size: 12px;
+  }
+  .profile {
+    height: 30px;
+    width: 30px;
+  }
+  .profile-name-tag {
+    font-size: 12px;
+  }
+  .body {
+    margin: 0;
+    background-color: white;
+  }
+  .main-content {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .payment-method {
+    font-size: 14px;
+  }
+  .form-check-img {
+    height: 30px;
+  }
+  .img-payment {
+    width: 120%;
+  }
+  .bank-card {
+    flex-direction: column;
+  }
+  .plus-button {
+    width: 30px;
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-left: 5px;
+    margin-bottom: 10%;
+  }
+  .ticket-detail {
+    font-size: 14px;
+  }
+  .form-check {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  .payment-class {
+    margin-left: 5%;
+    margin-right: 0;
+    width: 85%;
+  }
+  .detail-payment {
+    padding-right: 0%;
+  }
+  .detail-payment-info-text {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+  .detail-payment-value-text {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+  .button-payment {
+    margin-top: 30;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+}

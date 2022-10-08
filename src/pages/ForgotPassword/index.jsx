@@ -1,8 +1,9 @@
 import React from "react";
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import axios from "../../utils/axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "../../utils/axios";
 import Footer from "../../components/Footer";
+import { Icon } from "@iconify/react";
 
 import icon from "../../assets/img/icon.png";
 import logo from "../../assets/img/logo.png";
@@ -10,27 +11,30 @@ import logo from "../../assets/img/logo.png";
 import "./ForgotPassword.css";
 
 export default function ForgotPassword() {
-  // const navigate = useNavigate();
-  // const [form, setForm] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-  // const handleChangeForm = (e) => {
-  //   setForm({ ...form, [e.target.name]: e.target.value });
-  // };
-  // // const [showPassword, setShowPassword] = useState(false);
-  // const handleLogin = async () => {
-  //   try {
-  //     const result = await axios.post("auth/login", form);
-  //     localStorage.setItem("idUser", result.data.data.id);
-  //     localStorage.setItem("token", result.data.data.token);
-  //     // localStorage.setItem("refreshToken", result.data.data.refreshToken);
-  //     alert(result.data.msg);
-  //     navigate("/signup");
-  //   } catch (error) {
-  //     console.error(error.response);
-  //   }
-  // };
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChangeForm = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  const [showPassword, setShowPassword] = useState(false);
+  const handleForgotPassword = async () => {
+    try {
+      const result = await axios.post("auth/forgot", form);
+      localStorage.setItem("idUser", result.data.data.id);
+      localStorage.setItem("token", result.data.data.token);
+      localStorage.setItem("refreshToken", result.data.data.refreshToken);
+      alert(result.data.msg);
+      navigate("/signin");
+    } catch (error) {
+      console.error(error.response);
+    }
+  };
+  const hanldeShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <>
       <main>
@@ -51,14 +55,24 @@ export default function ForgotPassword() {
           </div>
           <div className="form-forgot">
             <form className="form-container-forgot">
-              <input
-                type="email"
-                className="form-input-forgot"
-                placeholder="Email"
-                // onChange={handleChangeForm}
-              />
-
-              <button className="button-forgot">Send</button>
+              <div className="position-relative input-icon">
+                <input
+                  type="email"
+                  className="form-input-forgot"
+                  placeholder="Email"
+                  onChange={handleChangeForm}
+                />
+                <i className="icon-eye-password" onClick={hanldeShowPassword}>
+                  {showPassword ? (
+                    <Icon icon="el:eye-open" width="75%" />
+                  ) : (
+                    <Icon icon="el:eye-close" width="75%" />
+                  )}
+                </i>
+              </div>
+              <button className="button-forgot" onClick={handleForgotPassword}>
+                Send
+              </button>
             </form>
           </div>
         </section>

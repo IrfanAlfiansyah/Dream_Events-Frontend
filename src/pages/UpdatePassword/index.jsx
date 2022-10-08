@@ -67,19 +67,21 @@ export default function UpdatePassword() {
                 placeholder="New Password"
                 onChange={handleChangeForm}
               />
-              <input
-                type={showPassword ? "text" : "password"}
-                name="password"
-                className="form-input-signin"
-                placeholder="Confirm Password"
-                onChange={handleChangeForm}
-              />
-              <div className="icon-eye-password" onClick={hanldeShowPassword}>
-                {showPassword ? (
-                  <Icon icon="el:eye-open" width="7%" />
-                ) : (
-                  <Icon icon="el:eye-close" width="7%" />
-                )}
+              <div className="position-relative input-icon">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  className="form-input-signin"
+                  placeholder="Confirm Password"
+                  onChange={handleChangeForm}
+                />
+                <i className="icon-eye-password" onClick={hanldeShowPassword}>
+                  {showPassword ? (
+                    <Icon icon="el:eye-open" width="75%" />
+                  ) : (
+                    <Icon icon="el:eye-close" width="75%" />
+                  )}
+                </i>
               </div>
               <button
                 type="button"

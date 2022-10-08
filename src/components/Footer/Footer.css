@@ -99,15 +99,28 @@
   }
   .logo-img2 {
     margin-bottom: 10px;
+    width: 75%;
   }
   .sosmed-icon {
     margin-top: 10px;
     margin-bottom: 65px;
     margin-right: 10px;
   }
+  .right-text-head {
+    font-size: 14px;
+  }
+  .right-text {
+    font-size: 12px;
+  }
+  .right-text:hover {
+    font-size: 13px;
+  }
   .info {
     margin-bottom: 0;
     padding-bottom: 50px;
+  }
+  .info-text {
+    font-size: 12px;
   }
   .col {
     margin-right: 30px;
