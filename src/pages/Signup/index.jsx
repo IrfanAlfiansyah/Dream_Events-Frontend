@@ -85,9 +85,9 @@ export default function Signup() {
                 />
                 <i className="icon-eye-password" onClick={hanldeShowPassword}>
                   {showPassword ? (
-                    <Icon icon="el:eye-open" width="75%" />
-                  ) : (
                     <Icon icon="el:eye-close" width="75%" />
+                  ) : (
+                    <Icon icon="el:eye-open" width="75%" />
                   )}
                 </i>
               </div>

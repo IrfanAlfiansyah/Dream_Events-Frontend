@@ -73,11 +73,11 @@ export default function Signin() {
                   placeholder="Password"
                   onChange={handleChangeForm}
                 />
-                <i className="far fa-eye" onClick={hanldeShowPassword}>
+                <i className="icon-eye-password" onClick={hanldeShowPassword}>
                   {showPassword ? (
-                    <Icon icon="el:eye-open" width="75%" />
-                  ) : (
                     <Icon icon="el:eye-close" width="75%" />
+                  ) : (
+                    <Icon icon="el:eye-open" width="75%" />
                   )}
                 </i>
               </div>
