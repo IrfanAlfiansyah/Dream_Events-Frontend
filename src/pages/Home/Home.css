@@ -16,6 +16,10 @@
 
 .box-1 {
   background-image: url(../../assets/img/layer.svg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
 }
@@ -112,6 +116,9 @@
 }
 .location-box {
   background-image: url(../../assets/img/layer.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   border-radius: 50px;
@@ -179,4 +186,148 @@
 .partner {
   margin: 5% 0 0 0;
   padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .banner-text {
+    font-size: 45px;
+  }
+  .search {
+    width: 70%;
+    height: 40px;
+  }
+  .search-icon {
+    width: 5%;
+  }
+  .line-event {
+    font-size: 12px;
+  }
+  .event-for-you {
+    font-size: 30px;
+  }
+  .see-all {
+    font-size: 12px;
+  }
+  .see-all:hover {
+    font-size: 14px;
+  }
+  .location-line {
+    font-size: 10px;
+  }
+  .discover-text {
+    font-size: 26px;
+    margin: 0 5% 0 0;
+  }
+  .picture {
+    width: 80%;
+  }
+  .place {
+    width: 80%;
+  }
+  .category-for-you {
+    font-size: 30px;
+  }
+  .nav-item {
+    font-size: 12px;
+  }
+  .nav-item:hover {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:768px) {
+  .banner-text {
+    font-size: 38px;
+  }
+  .search {
+    width: 80%;
+    height: 35px;
+  }
+  .search-icon {
+    width: 5%;
+  }
+  .search-text {
+    font-size: 10px;
+  }
+  .line-event {
+    font-size: 10px;
+  }
+  .event-for-you {
+    font-size: 28px;
+  }
+  .see-all {
+    height: 30px;
+  }
+  .location-line {
+    font-size: 8px;
+  }
+  .discover-text {
+    font-size: 18px;
+  }
+  .category-for-you {
+    font-size: 28px;
+  }
+}
+
+@media (max-width:425px) {
+  .box-1 {
+    justify-content: center;
+    align-items: center;
+  }
+  .search-section {
+    width: 100%;
+    margin-top: 5% 0 5% 0;
+    margin-left: 0;
+  }
+  .banner-text {
+    font-size: 25px;
+  }
+  .search {
+    margin-top: 80%;
+    margin-left: 11%;
+  }
+  .line-event {
+    width: 25%;
+    font-size: 8px;
+  }
+  .event-for-you {
+    font-size: 20px;
+  }
+  .see-all {
+    width: 60%;
+    height: 25px;
+    font-size: 10px;
+  }
+  .see-all:hover {
+    font-size: 12px;
+  }
+  .location-img-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .location-line {
+    font-size: 10px;
+    margin-left: 37%;
+    margin-top: 10%;
+  }
+  .discover-text {
+    width: 80%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    font-size: 20px;
+  }
+  .picture {
+    margin-left: 10%;
+  }
+  .place {
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: 14px;
+  }
+  .category-for-you {
+    font-size: 20px;
+    margin-bottom: 7%;
+  }
 }

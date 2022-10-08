@@ -27,7 +27,7 @@ function App() {
           path="*"
           element={
             <main className="d-flex justify-content-center align-item-center p-5 fw-bold">
-              <p>Page Not Found!</p>
+              <p>404. Page Not Found!</p>
             </main>
           }
         />

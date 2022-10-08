@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <div className="container-fluid">
         <Header />
-        <main className="box-1">
+        <main className="box-1" style={{ height: "auto", width: "100%" }}>
           <div className="home-banner">
             <div className="search-section">
               <h1 className="banner-text">Find events you love with our</h1>
