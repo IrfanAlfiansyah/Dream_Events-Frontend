@@ -12,19 +12,28 @@ import EventDetail from "./pages/EventDetail";
 import UpdatePassword from "./pages/UpdatePassword";
 import Payment from "./pages/Payment";
 
+import PublicRoutes from "./utils/routes/PublicRoute";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Auth  */}
+        <Route element={<PublicRoutes />}>
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+        </Route>
+
+        {/* Main  */}
         <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
         {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/order" element={<Order />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/eventdetail" element={<EventDetail />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/updatepassword" element={<UpdatePassword />} />
+
+        {/* PageNotFound  */}
         <Route
           path="*"
           element={
