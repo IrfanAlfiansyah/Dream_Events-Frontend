@@ -12,26 +12,36 @@ import EventDetail from "./pages/EventDetail";
 import UpdatePassword from "./pages/UpdatePassword";
 import Payment from "./pages/Payment";
 
-import PublicRoutes from "./utils/routes/PublicRoute";
+import PublicRoute from "./utils/routes/PublicRoute";
+import PrivateRoute from "./utils/routes/PrivateRoute";
+
+import { Provider } from "react-redux";
+import store from "./stores";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Auth  */}
-        <Route element={<PublicRoutes />}>
+        <Route element={<PublicRoute />}>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
 
         {/* Main  */}
         <Route path="/" element={<Home />} />
-        {/* <Route path="/profile" element={<Profile />} /> */}
-        <Route path="/order" element={<Order />} />
-        <Route path="/forgotpassword" element={<ForgotPassword />} />
-        <Route path="/eventdetail" element={<EventDetail />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/updatepassword" element={<UpdatePassword />} />
+
+        <Route element={<PrivateRoute />}>
+          <Route path="/order" element={<Order />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/eventdetail" element={<EventDetail />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/updatepassword" element={<UpdatePassword />} />
+          {/* <Route path="/profile" element={<Profile />} /> */}
+        </Route>
+
+        {/* Private admin route */}
+        <Route element={<PrivateRoute isAdmin={true} />}>{"...."}</Route>
 
         {/* PageNotFound  */}
         <Route
@@ -49,7 +59,9 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>
 );
