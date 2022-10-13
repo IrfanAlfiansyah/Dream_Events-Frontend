@@ -7,7 +7,7 @@ import "./Home.css";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-// import Date from "../../components/Date";
+import Date from "../../components/Date";
 import Card from "../../components/CardEvent";
 
 // import search from "../../assets/img/search.png";
@@ -38,14 +38,13 @@ export default function Home() {
 
   // Get data jika sudah ada perubahan state
   useEffect(() => {
-    console.log("search is update");
     getDataEvent();
   }, [page, searchName]);
 
   const getDataEvent = async () => {
     try {
       const result = await axios.get(
-        `event?name=&sort=&limit=5&page=&searchDate=`
+        `event?name=${searchName}&sort=&limit=5&page=${page}&searchDate=`
       );
 
       setData(result.data.data);
@@ -55,8 +54,8 @@ export default function Home() {
     }
   };
 
-  const handleDetailEvent = (userId) => {
-    navigate(`/eventdetail/${userId}`);
+  const handleDetailEvent = (eventId) => {
+    navigate(`/eventdetail/${eventId}`);
   };
 
   const handlePrevPage = () => {
@@ -98,14 +97,14 @@ export default function Home() {
               <div className="line-event">--- E V E N T</div>
             </div>
             <h1 className="event-for-you">Events For You</h1>
-            {/* <Date /> */}
+            <Date />
             <main className="container d-flex gap-3">
               {data.length > 0 ? (
                 data.map((item) => (
-                  <div key={item.id}>
+                  <div key={item.eventId}>
                     <Card
                       data={item}
-                      newData="Data Baru nih"
+                      newData="Data Baru"
                       handleDetail={handleDetailEvent}
                     />
                   </div>

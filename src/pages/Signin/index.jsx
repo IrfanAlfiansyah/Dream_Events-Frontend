@@ -31,7 +31,7 @@ export default function Signin() {
       alert(result.data.message);
       navigate("/");
     } catch (error) {
-      console.error(error.response);
+      alert(error.response.data.message);
     }
   };
   const hanldeShowPassword = () => {

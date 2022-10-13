@@ -10,7 +10,18 @@ import clock from "../../assets/img/clock.png";
 import attendees from "../../assets/img/attendees.png";
 import map from "../../assets/img/map.png";
 
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 export default function Event() {
+  const { eventId } = useParams();
+  console.log(eventId);
+
+  const navigate = useNavigate();
+
+  const handleOrder = (eventId) => {
+    navigate(`/order/${eventId}`);
+  };
   return (
     <>
       <Header />
@@ -65,7 +76,9 @@ export default function Event() {
                 <img className="map-location" src={map} alt="map" />
               </div>
             </div>
-            <button className="button-checkout">Buy Ticket</button>
+            <button className="button-checkout" onClick={handleOrder}>
+              Buy Ticket
+            </button>
           </div>
         </div>
       </main>

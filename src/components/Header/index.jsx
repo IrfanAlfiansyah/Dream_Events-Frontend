@@ -8,7 +8,7 @@ export default function Header() {
   const navigate = useNavigate();
   // const user = useSelector((state) => state.user);
   // const isLogin = localStorage.getItem("token");
-  const isLogin = false;
+  const isLogin = true;
   const name = "";
 
   const handleNavigate = (nav) => {

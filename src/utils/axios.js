@@ -1,12 +1,12 @@
 import axios from "axios";
 
 const axiosApiIntances = axios.create({
-  baseURL: "http://localhost:3001/api/",
-  // baseURL: "https://event-organizing-backend.vercel.app/api",
+  // baseURL: "http://localhost:3001/api/",
+  baseURL: "https://dream-events-backend.vercel.app/api/",
 });
 
 // Add a request interceptor
-axios.interceptors.request.use(
+axiosApiIntances.interceptors.request.use(
   function (config) {
     // Do something before request is sent
     config.headers = {
@@ -21,7 +21,7 @@ axios.interceptors.request.use(
 );
 
 // Add a response interceptor
-axios.interceptors.response.use(
+axiosApiIntances.interceptors.response.use(
   function (response) {
     // Any status code that lie within the range of 2xx cause this function to trigger
     // Do something with response data

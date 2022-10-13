@@ -1,6 +1,5 @@
 .card {
-  background-image: url(../../assets/img/event.png);
-  height: max-content;
+  height: 100%;
   align-items: center;
   justify-content: left;
 }

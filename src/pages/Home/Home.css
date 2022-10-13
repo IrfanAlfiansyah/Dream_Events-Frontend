@@ -98,6 +98,9 @@
   font-weight: 600;
   margin-bottom: 3%;
 }
+.App {
+  margin-bottom: 5%;
+}
 .see-all {
   border: 1px solid rgba(51, 102, 255, 1);
   height: 40px;
