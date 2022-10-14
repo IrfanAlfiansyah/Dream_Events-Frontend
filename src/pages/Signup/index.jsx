@@ -4,16 +4,19 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 import Footer from "../../components/Footer";
 import { Icon } from "@iconify/react";
+import { getDataUser } from "../../stores/actions/user";
 
 import icon from "../../assets/img/icon.png";
 import logo from "../../assets/img/logo.png";
 
 import "./Signup.css";
+import { useDispatch } from "react-redux";
 
 export default function Signup() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    // text: "",
+    text: "",
     email: "",
     password: "",
   });
@@ -24,7 +27,8 @@ export default function Signup() {
   const handleRegister = async () => {
     try {
       const result = await axios.post("auth/register", form);
-      localStorage.setItem("userId", result.data.data.id);
+      dispatch(getDataUser(result.data.data.userId));
+      // localStorage.setItem("userId", result.data.data.id);
       localStorage.setItem("token", result.data.data.token);
       localStorage.setItem("refreshToken", result.data.data.refreshToken);
       alert(result.data.message);
@@ -57,7 +61,7 @@ export default function Signup() {
           </div>
           <div className="form-signup">
             <form className="form-container-signup">
-              {/* <input
+              <input
                 type="text"
                 name="text"
                 className="form-input-signup"
@@ -65,7 +69,7 @@ export default function Signup() {
                 onChange={handleChangeForm}
               />
               {""}
-              <br /> */}
+              <br />
               <input
                 type="email"
                 name="email"

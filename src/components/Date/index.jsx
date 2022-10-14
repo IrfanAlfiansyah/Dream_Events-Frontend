@@ -25,8 +25,6 @@ export default function App() {
     setDateShow(date);
   };
 
-  console.log("DATE ACTIVE = " + dateShow);
-
   return (
     <div className="App">
       {listDateShow.map((item, index) => (

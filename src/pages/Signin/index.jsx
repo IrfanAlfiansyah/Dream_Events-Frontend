@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 import { Icon } from "@iconify/react";
 import Footer from "../../components/Footer";
+import { getDataUser } from "../../stores/actions/user";
 
 import icon from "../../assets/img/icon.png";
 import logo from "../../assets/img/logo.png";
@@ -11,8 +12,10 @@ import google from "../../assets/img/google.png";
 import facebook from "../../assets/img/fb..png";
 
 import "./Signin.css";
+import { useDispatch } from "react-redux";
 
 export default function Signin() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [form, setForm] = useState({
     email: "",
@@ -25,7 +28,8 @@ export default function Signin() {
   const handlelogin = async () => {
     try {
       const result = await axios.post("auth/login", form);
-      localStorage.setItem("userId", result.data.data.userId);
+      dispatch(getDataUser(result.data.data.userId));
+      // localStorage.setItem("userId", result.data.data.userId);
       localStorage.setItem("token", result.data.data.token);
       localStorage.setItem("refreshToken", result.data.data.refreshToken);
       alert(result.data.message);

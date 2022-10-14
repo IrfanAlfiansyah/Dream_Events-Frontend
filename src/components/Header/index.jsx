@@ -1,16 +1,22 @@
 import logo from "../../assets/img/logo.png";
 import { Link, useNavigate } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import avatar from "../../assets/img/profile.png";
+// import { useDispatch } from "react-redux";
 
 export default function Header() {
+  // const dispatch = useDispatch;
   const navigate = useNavigate();
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
   // const isLogin = localStorage.getItem("token");
   const isLogin = true;
-  const name = "";
 
+  const handleLogout = () => {
+    localStorage.clear();
+    // dispatch(isLogin(true));
+    navigate("/signin");
+  };
   const handleNavigate = (nav) => {
     navigate(`/${nav}`);
   };
@@ -44,7 +50,7 @@ export default function Header() {
                 </a> */}
               </li>
               <li className="nav-item">
-                <Link to="/eventdetail" className="nav-link">
+                <Link to="/manage-event" className="nav-link">
                   Create Event
                 </Link>
               </li>
@@ -60,7 +66,15 @@ export default function Header() {
                   <div style={{ cursor: "pointer" }}>
                     <img src={avatar} alt="avatar" />
                   </div>
-                  <p className="my-auto">{name ? name : "Anonymous"}</p>
+                  <p className="my-auto">
+                    {user.data.name ? user.data.name : "Anonymous"}
+                  </p>
+                  <button
+                    className="dropdown-item navbar-dropdown-profile-item"
+                    onClick={() => handleLogout()}
+                  >
+                    Logout
+                  </button>
                 </>
               ) : (
                 <>
