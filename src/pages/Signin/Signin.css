@@ -102,6 +102,9 @@ input[type="password"] {
   color: rgba(51, 102, 255, 1);
   background-color: white;
   border: 0;
+  width: 100%;
+  text-align: end;
+  height: 25px;
   
 }
 

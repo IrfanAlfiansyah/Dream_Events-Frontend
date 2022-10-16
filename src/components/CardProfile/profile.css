@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../../assets/Poppins/Poppins-Regular.ttf);
+}
+
+.container-profile {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 65%;
+  margin: 5% 0;
+  border-radius: 35px;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+.card-profile {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(55, 58, 66, 1);
+  margin-bottom: 5%;
+}
+.form-input {
+  display: flex;
+  flex-direction: row;
+}
+.label {
+  margin-right: 25%;
+}
+.form-name {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(55, 58, 66, 1);
+  padding: 0;
+  width: 20vh;
+}
+.form-container-edit-profile {
+  display: flex;
+  flex-direction: column;
+}
+.form-edit-profile {
+  border-radius: 10px;
+  margin-bottom: 10%;  
+  width: 50vh;
+  border: 1px solid rgba(193, 197, 208, 1);
+  margin-right: 5%;
+}
+.box-profile{
+  display: flex;
+  flex-direction: row;
+}

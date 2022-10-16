@@ -44,7 +44,7 @@ export default function Home() {
   const getDataEvent = async () => {
     try {
       const result = await axios.get(
-        `event?name=${searchName}&sort=&limit=5&page=${page}&searchDate=`
+        `event?name=${searchName}&sort=&limit=4&page=${page}&searchDate=`
       );
 
       setData(result.data.data);
@@ -98,7 +98,7 @@ export default function Home() {
             </div>
             <h1 className="event-for-you">Events For You</h1>
             <Date />
-            <main className="container d-flex gap-3">
+            <main className="img-card-event">
               {data.length > 0 ? (
                 data.map((item) => (
                   <div key={item.eventId}>

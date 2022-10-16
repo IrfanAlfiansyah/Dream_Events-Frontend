@@ -1,8 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../../assets/Poppins/Poppins-Regular.ttf");
+}
+
 .card {
-  height: 100%;
   align-items: center;
   justify-content: left;
+  border-radius: 20px;   
 }
 .card-body {
-  
+  padding:  15% 0;
+}
+.card-event-name {
+  width: 100%;
+  height: 20rem;
+  border-radius: 20px;
+}
+.container-img {
+  padding: 0;
+}
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Poppins;
+}
+.card-text {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+.btn-card-img {
+  width: 100%;
+  height: 25%;
+  border-radius: 15px;
+  font-size: 14px;
+  font-family: Poppins;
 }

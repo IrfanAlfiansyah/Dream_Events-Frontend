@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
-// import Profile from "./pages/Profile";
+import Profile from "./pages/Profile";
 import Order from "./pages/Order";
 import ForgotPassword from "./pages/ForgotPassword";
 import EventDetail from "./pages/EventDetail";
@@ -34,7 +34,7 @@ function App() {
           <Route path="/eventdetail/:eventId" element={<EventDetail />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/updatepassword" element={<UpdatePassword />} />
-          {/* <Route path="/profile" element={<Profile />} /> */}
+          <Route path="/profile" element={<Profile />} />
         </Route>
 
         {/* Private admin route */}

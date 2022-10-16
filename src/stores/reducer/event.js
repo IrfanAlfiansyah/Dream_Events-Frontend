@@ -19,7 +19,7 @@ const event = (state = initialState, action) => {
         data: [],
       };
     }
-    case "GET_DATA_EVENT_FULFILLED": {
+    case "GET_DATA_EVENT_FULLFILLED": {
       return {
         ...state,
         data: action.payload.data.data,
@@ -31,7 +31,7 @@ const event = (state = initialState, action) => {
         data: [],
       };
     }
-    case " CREATE_DATA_EVENT_PENDING": {
+    case "CREATE_DATA_EVENT_PENDING": {
       return {
         ...state,
         isLoading: true,
@@ -39,7 +39,7 @@ const event = (state = initialState, action) => {
         message: "",
       };
     }
-    case " CREATE_DATA_EVENT_FULFILLED": {
+    case "CREATE_DATA_EVENT_FULFILLED": {
       return {
         ...state,
         isLoading: false,
@@ -47,7 +47,55 @@ const event = (state = initialState, action) => {
         message: action.payload.data.message,
       };
     }
-    case " CREATE_DATA_EVENT_REJECTED": {
+    case "CREATE_DATA_EVENT_REJECTED": {
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        message: action.payload.data.message,
+      };
+    }
+    case "UPDATE_DATA_EVENT_PENDING": {
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+        message: "",
+      };
+    }
+    case "UPDATE_DATA_EVENT_FULFILLED": {
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        message: action.payload.data.message,
+      };
+    }
+    case "UPDATE_DATA_EVENT_REJECTED": {
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        message: action.payload.data.message,
+      };
+    }
+    case "DELETE_DATA_EVENT_PENDING": {
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+        message: "",
+      };
+    }
+    case "DELETE_DATA_EVENT_FULFILLED": {
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        message: action.payload.data.message,
+      };
+    }
+    case "DELETE_DATA_EVENT_REJECTED": {
       return {
         ...state,
         isLoading: false,

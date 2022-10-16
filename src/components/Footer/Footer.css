@@ -180,8 +180,8 @@
 @media (max-width:425px) {
   .info {
     flex-direction: column;
-    margin-left: 5%;
-    margin-bottom: 0;
+    margin-left: 5% !important;
+    margin-bottom: 0 !important;
     margin-top: 20px;
   }
   .logo-img2 {

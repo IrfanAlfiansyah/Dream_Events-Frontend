@@ -13,3 +13,17 @@ export const createDataEvent = (data) => {
     payload: axios.post("event", data),
   };
 };
+
+export const updateDataEvent = (data, eventId) => {
+  return {
+    type: "UPDATE_DATA_EVENT",
+    payload: axios.patch(`event/${eventId}`, data),
+  };
+};
+
+export const deleteDataEvent = (eventId) => {
+  return {
+    type: "DELETE_DATA_EVENT",
+    payload: axios.delete(`event/${eventId}`),
+  };
+};
