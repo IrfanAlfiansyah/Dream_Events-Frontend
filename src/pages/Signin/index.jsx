@@ -11,7 +11,7 @@ import logo from "../../assets/img/logo.png";
 import google from "../../assets/img/google.png";
 import facebook from "../../assets/img/fb..png";
 
-import "./Signin.css";
+import "./Login.css";
 import { useDispatch } from "react-redux";
 
 export default function Signin() {

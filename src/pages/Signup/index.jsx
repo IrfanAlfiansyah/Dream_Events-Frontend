@@ -8,7 +8,7 @@ import { getDataUser } from "../../stores/actions/user";
 import icon from "../../assets/img/icon.png";
 import logo from "../../assets/img/logo.png";
 
-import "./Signup.css";
+import "./Register.css";
 import { useDispatch } from "react-redux";
 
 export default function Signup() {
