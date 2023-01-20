@@ -14,53 +14,118 @@
   flex-direction: row;
   background: rgba(244, 247, 255, 1);
 }
-.main-content-profile {
-  display: flex;
-  flex-direction: column;
+.left-profile {
   width: 25%;
-  margin: 5% 3%;
+  margin: 3%;
+  border-radius: 15px;
 }
-.side-navigation {
+.left-profile-photo {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10%;
-}
-.photo {
-  width: 20%;
-  margin-right: 10%;
-}
-.tag {
-  display: flex;
-  flex-direction: column;
-}
-.side-img-profile {
-  display: flex;
-  flex-direction: row;
-  width: 10%;
-  margin-right: 5%;
-}
-.edit {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin-left: 15%;
-}
-.profile-name {
   align-items: center;
+  margin-bottom: 12%;
+}
+.left-profile-edit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10%;
+  margin-left: 5%;
+}
+.description {
+  margin: 0;
+  margin-left: 7%;
   font-family: Poppins;
   font-size: 14px;
   font-weight: 600;
+  color: rgba(55, 58, 66, 1);
 }
-.profile-profession {
+.description:hover {
+  color: blue;
+}
+.description-logout {
+  margin: 0;
+  margin-left: 7%;
   font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(240, 56, 0, 1);
+}
+.photo {
+  width: 50px;
+}
+.description-image {
+  width: 20px;
+}
+.right-profile {
+  width: 65%;
+  background-color: white;
+  margin: 3% 0;
+  padding: 3% 3%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+}
+.form-input-profile {
+  width: 60%;
+}
+.title-profile {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 3%;
+}
+.label-profile {
+  width: 30%;
+  text-align: left;
+  padding: 0 !important;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+.form-input input {
+  height: 30px;
+  width: 70%;
+  border-radius: 10px;
+  margin-bottom: 5%;
   font-size: 12px;
+  padding: 0 3% !important;
+  border: 1px solid rgba(193, 197, 208, 1)
+}
+.photo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  padding-left: 5%;
+}
+input#file-upload-button {
+  font-family: Poppins;
+  font-size: 14px;
   font-weight: 400;
 }
 .button-save {
   background-color: blue;
-  width: 30%;
-  height: 50px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 14px;
+  font-family: Poppins;
   color: white;
-  border-radius: 15px;
-  margin-bottom: 5%;
+  height: 50px;
+}
+.form-image-user {
+  margin: 0 5%;
+}
+.avatar-profil {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.choose-photo {
+  width: 50%;
+  height: fit-content;
 }

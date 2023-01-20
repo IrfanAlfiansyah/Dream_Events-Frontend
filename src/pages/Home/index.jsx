@@ -9,9 +9,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Date from "../../components/Date";
 import Card from "../../components/CardEvent";
-
-// import search from "../../assets/img/search.png";
-// import location from "../../assets/img/location.png";
 import arrow from "../../assets/img/arrow.png";
 import Jakarta from "../../assets/img/jakarta.png";
 import Bandung from "../../assets/img/bandung.png";
@@ -78,10 +75,10 @@ export default function Home() {
           <div className="home-banner">
             <div className="search-section">
               <h1 className="banner-text">Find events you love with our</h1>
-              <div className="search text-center">
+              <div className="search text-center gap-3">
                 <input
                   type="text"
-                  placeholder="Search ..."
+                  placeholder="Search Event..."
                   onChange={(e) => setKeyword(e.target.value)}
                 />
                 <button className="search-button" onClick={handleSearchName}>

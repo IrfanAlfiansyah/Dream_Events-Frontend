@@ -7,6 +7,13 @@ export const getDataEvent = () => {
   };
 };
 
+export const getDataEventById = (eventId) => {
+  return {
+    type: "GET_DATA_EVENT",
+    payload: axios.get(`event/${eventId}`),
+  };
+};
+
 export const createDataEvent = (data) => {
   return {
     type: "CREATE_DATA_EVENT",

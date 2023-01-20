@@ -2,74 +2,86 @@ import React from "react";
 
 import "./profile.css";
 
-export default function CardProfile() {
+export default function CardProfile(props) {
+  const data = props;
+  console.log(data);
+
   return (
-    <main className="container-profile">
-      <div className="card-profile">Profile</div>
-      <div className="form-input">
-        <form className="form-container-edit-profile">
-          <div className="box-profile">
-            <label className="form-name">Name</label>
-            <input
-              type="text"
-              className="form-edit-profile"
-              placeholder="Input Name"
-            />
+    <>
+      <div className="right-profile">
+        <h1 className="title-profile">Profile</h1>
+        <div className="form">
+          <form className="form-input-profile">
+            <div className="form-input">
+              <label className="label-profile">Name</label>
+              <input
+                className="label-profile"
+                type="text"
+                // placeholder="Input Name..."
+                name="name"
+              />
+            </div>
+            <div className="form-input">
+              <label className="label-profile">Username</label>
+              <input
+                className="label-profile"
+                type="text"
+                placeholder="Input Username..."
+              />
+            </div>
+            <div className="form-input">
+              <label className="label-profile">Email</label>
+              <input
+                className="label-profile"
+                type="text"
+                placeholder="Input Email..."
+              />
+            </div>
+            <div className="form-input">
+              <label className="label-profile">Phone Number</label>
+              <input
+                className="label-profile"
+                type="number"
+                placeholder="Input Phone Number..."
+              />
+            </div>
+            <div className="form-input">
+              <label className="label-profile">Gender</label>
+              <input
+                className="label-profile"
+                type="text"
+                placeholder="Input Name..."
+              />
+            </div>
+            <div className="form-input">
+              <label className="label-profile">Profession</label>
+              <input
+                className="label-profile"
+                type="text"
+                placeholder="Input Profession..."
+              />
+            </div>
+            <div className="form-input">
+              <label className="label-profile">Nationality</label>
+              <input
+                className="label-profile"
+                type="text"
+                placeholder="Input Nationality..."
+              />
+            </div>
+            <div className="form-input">
+              <label className="label-profile">Birthday Date</label>
+              <input className="label-profile" type="date" />
+            </div>
+          </form>
+          <div className="photo-box">
+            <input type="file" name="image" />
+            <p>Image size max 2 MB</p>
+            <p>Image format: JPG, JPEG, PNG</p>
           </div>
-          <div className="box-profile">
-            <label className="form-name">Username</label>
-            <input
-              type="text"
-              className="form-edit-profile"
-              placeholder="Input Username"
-            />
-          </div>
-          <div className="box-profile">
-            <label className="form-name">Email</label>
-            <input
-              type="text"
-              className="form-edit-profile"
-              placeholder="Input Email"
-            />
-          </div>
-          <div className="box-profile">
-            <label className="form-name">Gender</label>
-            <input
-              type="text"
-              className="form-edit-profile"
-              placeholder="Input Gender"
-            />
-          </div>
-          <div className="box-profile">
-            <label className="form-name">Profession</label>
-            <input
-              type="text"
-              className="form-edit-profile"
-              placeholder="Input Profession"
-            />
-          </div>
-          <div className="box-profile">
-            <label className="form-name">Nationality</label>
-            <input
-              type="text"
-              className="form-edit-profile"
-              placeholder="Input Nationality"
-            />
-          </div>
-          <div className="box-profile">
-            <label className="form-name">Birthday Date</label>
-            <input
-              type="text"
-              className="form-edit-profile"
-              placeholder="Input Birthday Date"
-            />
-          </div>
-        </form>
-        <div className="box-profile-img">
-          <input type="file" className="form-edit-profile" />
         </div>
+        <button className="button-save">Save</button>
       </div>
-      <button className="button-save">Save</button>
-    </main>
+    </>
   );
 }

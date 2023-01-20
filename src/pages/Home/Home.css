@@ -50,6 +50,9 @@
   height: 50px;
   width: 60%;
 }
+.search input {
+  border: none;
+}
 .search-icon {
   width: 7%;
   height: 40%;
@@ -100,7 +103,6 @@
 }
 .img-card-event {
   margin: 0 5%;
-  padding: 0;
 }
 .App {
   margin-bottom: 5%;

@@ -31,6 +31,24 @@ const event = (state = initialState, action) => {
         data: [],
       };
     }
+    case "GET_DATA_EVENT_BY_ID_PENDING": {
+      return {
+        ...state,
+        data: [],
+      };
+    }
+    case "GET_DATA_EVENT_BY_ID_FULLFILLED": {
+      return {
+        ...state,
+        data: action.payload.data.data[0],
+      };
+    }
+    case "GET_DATA_EVENT_BY_ID_REJECTED": {
+      return {
+        ...state,
+        data: [],
+      };
+    }
     case "CREATE_DATA_EVENT_PENDING": {
       return {
         ...state,

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 // import { deleteDataEvent, getDataEvent } from "../../stores/actions/event";
 // import { useDispatch } from "react-redux";
-// import "./Card.css";
+import "./Card.css";
 
 function CardEvent(props) {
   const navigate = useNavigate();

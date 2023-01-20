@@ -9,17 +9,24 @@
   src: url("../../assets/Poppins/Poppins-Regular.ttf");
 }
 
+.page {
+  background-color: rgb(236, 236, 236);
+}
 .signup {
-  max-width: 100%;
+  margin: 0 !important;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  height: max-content;
+  height: fit-content;
+  padding: 5%;
 }
 
 /* side-section */
 .side-content-signup {
-  flex: 60%;
+  flex: 50%;
   background-color: rgba(51, 102, 255, 1);
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
 }
 
 .side-img-signup {
@@ -28,7 +35,10 @@
 
 /* main-section */
 .main-header-signup {
-  flex: 40%;
+  flex: 50%;
+  background-color: white;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 .header-logo-signup {
@@ -42,12 +52,13 @@
   font-size: 24px;
   font-weight: 600;
   margin-left: 10%;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .welcome-signup {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .welcome-text-signup {
@@ -74,17 +85,16 @@
 }
 
 .form-signup {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .form-container-signup {
-  padding-bottom: 10%;
+  padding-bottom: 2%;
   padding-left: 10%;
   padding-right: 10%;
   font-family: Poppins;
   font-size: 14px;
   font-weight: 500;
-  margin-top: 5%;
   text-align: left;
 }
 
@@ -116,9 +126,9 @@ input[type="password"] {
 
 .button-signup {
   height: 55px;
-  width: 100%;
+  width: 80%;
   border-radius: 20px;
-  margin-top: 5%;
+  margin-left: 10%;
   background: rgba(51, 102, 255, 1);
   border: 0;
   box-shadow: 0px 8px 10px 0px rgba(35, 149, 255, 0.3);
@@ -126,6 +136,7 @@ input[type="password"] {
   font-size: 16px;
   font-weight: 600;
   color: white;
+  margin-bottom: 5%;
 }
 
 .button-signup:hover {

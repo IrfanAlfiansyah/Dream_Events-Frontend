@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
-import Footer from "../../components/Footer";
 import { Icon } from "@iconify/react";
 import { getDataUser } from "../../stores/actions/user";
 
@@ -16,7 +15,7 @@ export default function Signup() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    text: "",
+    username: "",
     email: "",
     password: "",
   });
@@ -28,7 +27,7 @@ export default function Signup() {
     try {
       const result = await axios.post("auth/register", form);
       dispatch(getDataUser(result.data.data.userId));
-      // localStorage.setItem("userId", result.data.data.id);
+      localStorage.setItem("userId", result.data.data.userId);
       localStorage.setItem("token", result.data.data.token);
       localStorage.setItem("refreshToken", result.data.data.refreshToken);
       alert(result.data.message);
@@ -42,69 +41,70 @@ export default function Signup() {
   };
   return (
     <>
-      <main className="signup">
-        <aside className="row side-content-signup justify-content-center align-items-center">
-          <img className="side-img-signup" src={icon} alt="icon" />
-        </aside>
-        <section className="main-header-signup">
-          <header className="header-signup">
-            <img className="header-logo-signup" src={logo} alt="logo" />
-          </header>
-          <div className="title-signup">
-            <h1 className="title-text-signup">Sign Up</h1>
-            <div className="welcome-signup">
-              <p className="welcome-text-signup">Already have an account? </p>
-              <Link to="/signin">
-                <button className="login-button">Log in</button>
-              </Link>
+      <main className="page">
+        <div className="signup">
+          <aside className="row side-content-signup justify-content-center align-items-center">
+            <img className="side-img-signup" src={icon} alt="icon" />
+          </aside>
+          <section className="main-header-signup">
+            <header className="header-signup">
+              <img className="header-logo-signup" src={logo} alt="logo" />
+            </header>
+            <div className="title-signup">
+              <h1 className="title-text-signup">Sign Up</h1>
+              <div className="welcome-signup">
+                <p className="welcome-text-signup">Already have an account? </p>
+                <Link to="/signin">
+                  <button className="login-button">Log in</button>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="form-signup">
-            <form className="form-container-signup">
-              <input
-                type="text"
-                name="text"
-                className="form-input-signup"
-                placeholder="Username"
-                onChange={handleChangeForm}
-              />
-              {""}
-              <br />
-              <input
-                type="email"
-                name="email"
-                className="form-input-signup"
-                placeholder="Email"
-                onChange={handleChangeForm}
-              />
-              {""}
-              <br />
-              <div className="position-relative input-icon">
+            <div className="form-signup">
+              <form className="form-container-signup">
                 <input
-                  type={showPassword ? "text" : "password"}
-                  name="password"
+                  type="text"
+                  name="username"
                   className="form-input-signup"
-                  placeholder="Password"
+                  placeholder="Username"
                   onChange={handleChangeForm}
                 />
-                <i className="icon-eye-password" onClick={hanldeShowPassword}>
-                  {showPassword ? (
-                    <Icon icon="el:eye-close" width="75%" />
-                  ) : (
-                    <Icon icon="el:eye-open" width="75%" />
-                  )}
-                </i>
-              </div>
-              {/* <input type="checkbox" name="text" className="checkbox" />
-              Accept terms and condition */}
+                {""}
+                <br />
+                <input
+                  type="email"
+                  name="email"
+                  className="form-input-signup"
+                  placeholder="Email"
+                  onChange={handleChangeForm}
+                />
+                {""}
+                <br />
+                <div className="position-relative input-icon">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    className="form-input-signup"
+                    placeholder="Password"
+                    onChange={handleChangeForm}
+                  />
+                  <i className="icon-eye-password" onClick={hanldeShowPassword}>
+                    {showPassword ? (
+                      <Icon icon="el:eye-close" width="65%" />
+                    ) : (
+                      <Icon icon="el:eye-open" width="65%" />
+                    )}
+                  </i>
+                </div>
+                <input type="checkbox" name="text" className="checkbox" />
+                Accept terms and condition
+              </form>
               <button className="button-signup" onClick={handleRegister}>
                 Sign Up
               </button>
-            </form>
-          </div>
-        </section>
+            </div>
+          </section>
+        </div>
       </main>
-      <Footer />
     </>
   );
 }

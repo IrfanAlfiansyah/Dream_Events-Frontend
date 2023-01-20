@@ -9,50 +9,63 @@
   src: url(../../assets/Poppins/Poppins-Regular.ttf);
 }
 
-.container-profile {
+.right-profile {
+  width: 65%;
+  background-color: white;
+  margin: 3% 0;
+  padding: 3% 3%;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  width: 65%;
-  margin: 5% 0;
-  border-radius: 35px;
-  padding-top: 5%;
-  padding-left: 5%;
 }
-.card-profile {
+.form {
+  display: flex;
+  flex-direction: row;
+}
+.form-input-profile {
+  width: 60%;
+}
+.title-profile {
   font-family: Poppins;
   font-size: 20px;
   font-weight: 600;
-  color: rgba(55, 58, 66, 1);
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
-.form-input {
-  display: flex;
-  flex-direction: row;
-}
-.label {
-  margin-right: 25%;
-}
-.form-name {
+.label-profile {
+  width: 30%;
+  text-align: left;
+  padding: 0 !important;
   font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(55, 58, 66, 1);
-  padding: 0;
-  width: 20vh;
 }
-.form-container-edit-profile {
+.form-input input {
+  height: 30px;
+  width: 70%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  font-size: 12px;
+  padding: 0 3% !important;
+  border: 1px solid rgba(193, 197, 208, 1)
+}
+.photo-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 40%;
+  padding-left: 5%;
 }
-.form-edit-profile {
+input#file-upload-button {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+.button-save {
+  background-color: blue;
   border-radius: 10px;
-  margin-bottom: 10%;  
-  width: 50vh;
-  border: 1px solid rgba(193, 197, 208, 1);
-  margin-right: 5%;
-}
-.box-profile{
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  font-size: 14px;
+  font-family: Poppins;
+  color: white;
+  height: 50px;
 }

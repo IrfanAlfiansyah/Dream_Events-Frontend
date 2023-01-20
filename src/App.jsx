@@ -19,22 +19,22 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Main  */}
+        <Route path="/" element={<Home />} />
+
         {/* Auth  */}
         <Route element={<PublicRoute />}>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
 
-        {/* Main  */}
-        <Route path="/" element={<Home />} />
-
         <Route element={<PrivateRoute />}>
-          <Route path="/order/:eventId" element={<Order />} />
+          <Route path="/order" element={<Order />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/eventdetail/:eventId" element={<EventDetail />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/updatepassword" element={<UpdatePassword />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:userId" element={<Profile />} />
         </Route>
 
         {/* Private admin route */}

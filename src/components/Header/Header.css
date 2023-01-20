@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../../assets/Poppins/Poppins-Regular.ttf);
+}
+
+.navbar {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.photo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+}

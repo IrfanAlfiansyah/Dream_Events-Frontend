@@ -22,7 +22,7 @@ export default function ForgotPassword() {
   const [showPassword, setShowPassword] = useState(false);
   const handleForgotPassword = async () => {
     try {
-      const result = await axios.post("auth/forgot", form);
+      const result = await axios.post("auth/forgotPassword", form);
       localStorage.setItem("idUser", result.data.data.id);
       localStorage.setItem("token", result.data.data.token);
       localStorage.setItem("refreshToken", result.data.data.refreshToken);
