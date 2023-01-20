@@ -33,6 +33,7 @@ export default function Signup() {
       alert(result.data.message);
       navigate("/signin");
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error(error.response);
     }
   };
