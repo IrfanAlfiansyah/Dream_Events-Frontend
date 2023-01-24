@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
         <div className="col">
           <section className="body">
-            <p className="right-text-head">Wetick</p>
+            <p className="right-text-head">Dream Events</p>
             <p className="right-text">About us</p>
             <p className="right-text">Features</p>
             <p className="right-text">Blog</p>
@@ -62,7 +62,9 @@ export default function Footer() {
         </div>
       </footer>
       <div className="bottom-footer">
-        <p className="bottom-footer-text">@2022 Wetick Alrights Reserved</p>
+        <p className="bottom-footer-text">
+          @2022 Dream Events Alrights Reserved
+        </p>
       </div>
     </>
   );

@@ -32,7 +32,7 @@ export default function Header() {
       <nav className="navbar navbar-expand-lg bg-white">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
           </a>
           <button
             className="navbar-toggler"
